@@ -66,7 +66,6 @@ RSpec.describe "Users", type: :request do
 
       it "returns an array of error messages in the body" do
         post "/signup", params: user_params
-
         expect(response.body).to include_json({
           errors: a_kind_of(Array)
         })
